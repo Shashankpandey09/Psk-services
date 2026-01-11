@@ -8,24 +8,24 @@ const projects = [
         title: "Exness Trade",
         category: "Fintech Platform",
         year: "2025",
-        // Trading/Fintech chart visualization
-        image: "https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=2600&auto=format&fit=crop"
+        // Trading/Dark Chart
+        image: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=2600&auto=format&fit=crop"
     },
     {
         id: '02',
         title: "n8n Workflow",
         category: "Automation Dashboard",
         year: "2025",
-        // Node-based interface/abstract tech
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2600&auto=format&fit=crop"
+        // Abstract Nodes/Connections
+        image: "https://images.unsplash.com/photo-1558494949-efc5270f9c23?q=80&w=2600&auto=format&fit=crop"
     },
     {
         id: '03',
         title: "Nexus Core",
         category: "Web3 Exchange",
         year: "2024",
-        // Abstract digital network
-        image: "https://images.unsplash.com/photo-1639322537228-ad7117a738b4?q=80&w=2600&auto=format&fit=crop"
+        // Blockchain/Abstract
+        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2600&auto=format&fit=crop"
     }
 ];
 
