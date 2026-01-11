@@ -1,5 +1,29 @@
-import { motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
 import './About.css';
+
+const Counter = ({ from, to, suffix = "" }: { from: number; to: number; suffix?: string }) => {
+    const nodeRef = useRef<HTMLSpanElement>(null);
+    const isInView = useInView(nodeRef, { once: true, margin: "-100px" });
+
+    useEffect(() => {
+        if (isInView) {
+            const node = nodeRef.current;
+            const controls = animate(from, to, {
+                duration: 2.5,
+                ease: [0.16, 1, 0.3, 1], // easeOutExpo
+                onUpdate(value) {
+                    if (node) {
+                        node.textContent = Math.floor(value) + suffix;
+                    }
+                },
+            });
+            return () => controls.stop();
+        }
+    }, [from, to, isInView, suffix]);
+
+    return <span ref={nodeRef} className="stat-value" />;
+};
 
 export const About = () => {
     return (
@@ -14,7 +38,7 @@ export const About = () => {
                     >
                         <span className="label">The Agency</span>
                         <h2 className="display-lg">
-                            We operate at the intersection of <span className="text-secondary">art and engineering.</span>
+                            We operate at the intersection of <span className="about-highlight">art and engineering.</span>
                         </h2>
                     </motion.div>
 
@@ -51,11 +75,11 @@ export const About = () => {
                             transition={{ delay: 0.4 }}
                         >
                             <div className="stat-item">
-                                <span className="stat-value">10+</span>
+                                <Counter from={1} to={10} suffix="+" />
                                 <span className="stat-label">Years of Innovation</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-value">50+</span>
+                                <Counter from={1} to={50} suffix="+" />
                                 <span className="stat-label">Global Awards</span>
                             </div>
                         </motion.div>
