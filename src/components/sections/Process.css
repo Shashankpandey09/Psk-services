@@ -1,0 +1,102 @@
+.process-section {
+    padding: 10rem 0;
+    background: var(--bg-tertiary);
+}
+
+.process-timeline {
+    position: relative;
+    margin-top: 6rem;
+    padding-left: 2rem;
+}
+
+.process-line {
+    position: absolute;
+    top: 0;
+    left: 31px;
+    /* Align with marker center */
+    width: 1px;
+    height: 100%;
+    background: var(--border);
+    transform-origin: top;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    position: relative;
+}
+
+.step-marker {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.marker-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.step-content {
+    padding-top: 1rem;
+    max-width: 600px;
+}
+
+.step-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.step-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.step-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .process-timeline {
+        padding-left: 0;
+    }
+
+    .process-line {
+        left: 20px;
+    }
+
+    .step-marker {
+        width: 40px;
+        height: 40px;
+    }
+
+    .process-step {
+        gap: 1.5rem;
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+    }
+}

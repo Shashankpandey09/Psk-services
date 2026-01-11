@@ -1,0 +1,140 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 0 4rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-label {
+    margin-bottom: 3rem;
+}
+
+.hero-headline {
+    margin-bottom: 3rem;
+}
+
+.headline-line {
+    overflow: hidden;
+}
+
+.display-xl {
+    display: block;
+}
+
+.display-xl.accent {
+    color: var(--accent-light);
+}
+
+.hero-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 3rem 0;
+    transform-origin: left;
+}
+
+.hero-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: end;
+}
+
+.hero-desc {
+    max-width: 480px;
+}
+
+.cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 2rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.cta-primary:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px var(--accent-glow);
+}
+
+.cta-primary svg {
+    transition: transform 0.3s;
+}
+
+.cta-primary:hover svg {
+    transform: translate(3px, -3px);
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: -1.5px;
+    animation: scrollDot 2s infinite;
+}
+
+@keyframes scrollDot {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero-bottom {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .hero-scroll-indicator {
+        display: none;
+    }
+}
