@@ -50,7 +50,7 @@ export const Contact = () => {
                             <div className="detail-item">
                                 <span className="detail-label">WhatsApp</span>
                                 <a
-                                    href="https://wa.me/919696013164"
+                                    href="https://wa.me/919696013164?text=Hi%2C%20I%27d%20like%20to%20discuss%20building%20a%20project%20with%20PSK."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="detail-link whatsapp-link"
