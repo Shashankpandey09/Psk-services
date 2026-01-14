@@ -153,9 +153,4 @@
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-
-    /* Hide second project on mobile */
-    .project-card:nth-child(2) {
-        display: none;
-    }
 }
