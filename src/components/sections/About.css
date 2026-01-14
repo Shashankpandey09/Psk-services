@@ -28,8 +28,10 @@
 .about-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2.5rem;
-    padding-top: 1rem;
+    font-size: 1.1rem;
+   
 }
 
 .about-stats {
