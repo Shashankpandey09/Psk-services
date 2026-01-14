@@ -1,29 +1,8 @@
-import { useRef, useEffect } from 'react';
-import { motion, useInView, animate } from 'framer-motion';
+
+import { motion} from 'framer-motion';
 import './About.css';
 
-const Counter = ({ from, to, suffix = "" }: { from: number; to: number; suffix?: string }) => {
-    const nodeRef = useRef<HTMLSpanElement>(null);
-    const isInView = useInView(nodeRef, { once: true, margin: "-100px" });
 
-    useEffect(() => {
-        if (isInView) {
-            const node = nodeRef.current;
-            const controls = animate(from, to, {
-                duration: 2.5,
-                ease: [0.16, 1, 0.3, 1], // easeOutExpo
-                onUpdate(value) {
-                    if (node) {
-                        node.textContent = Math.floor(value) + suffix;
-                    }
-                },
-            });
-            return () => controls.stop();
-        }
-    }, [from, to, isInView, suffix]);
-
-    return <span ref={nodeRef} className="stat-value" />;
-};
 
 export const About = () => {
     return (
