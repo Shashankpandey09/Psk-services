@@ -45,7 +45,7 @@ export const About = () => {
                     <div className="about-content">
                         <motion.p
                             className="body-lg"
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
@@ -57,7 +57,7 @@ export const About = () => {
 
                         <motion.p
                             className="body-md"
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
@@ -67,22 +67,7 @@ export const About = () => {
                             but fundamentally sound and performant.
                         </motion.p>
 
-                        <motion.div
-                            className="about-stats"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.4 }}
-                        >
-                            <div className="stat-item">
-                                <Counter from={1} to={10} suffix="+" />
-                                <span className="stat-label">Years of Innovation</span>
-                            </div>
-                            <div className="stat-item">
-                                <Counter from={1} to={50} suffix="+" />
-                                <span className="stat-label">Global Awards</span>
-                            </div>
-                        </motion.div>
+                     
                     </div>
                 </div>
             </div>
