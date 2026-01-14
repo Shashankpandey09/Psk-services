@@ -50,12 +50,12 @@ export const Contact = () => {
                             <div className="detail-item">
                                 <span className="detail-label">WhatsApp</span>
                                 <a
-                                    href="https://wa.me/919026940191"
+                                    href="https://wa.me/9696013164"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="detail-link whatsapp-link"
                                 >
-                                    <span>+91 9026940191</span>
+                                    <span>+91 9696013164</span>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" strokeWidth="1.5" />
                                     </svg>
