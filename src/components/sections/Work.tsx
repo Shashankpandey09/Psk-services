@@ -2,30 +2,35 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Work.css';
 
+// Import images
+import eliteWellnessImg from '../../assets/Elite_Wellness.jpg';
+import electroPanelImg from '../../assets/ElectroPanel.jpg';
+import gymFitImg from '../../assets/Gym_fit.jpg';
+
 const projects = [
     {
         id: '01',
-        title: "Exness Trade",
+        title: "Elite Wellness",
         category: "Fintech Platform",
         year: "2025",
-        // Trading/Dark Chart
-        image: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=2600&auto=format&fit=crop"
+        image: eliteWellnessImg,
+        link: "https://v0-website-redesign-omega-hazel.vercel.app/"
     },
     {
         id: '02',
-        title: "n8n Workflow",
+        title: "Electro Panel",
         category: "Automation Dashboard",
         year: "2025",
-        // Abstract Nodes/Connections
-        image: "https://images.unsplash.com/photo-1558494949-efc5270f9c23?q=80&w=2600&auto=format&fit=crop"
+        image: electroPanelImg,
+        link: "https://b2bmanufacturedemo.pskservice.org/"
     },
     {
         id: '03',
-        title: "Nexus Core",
-        category: "Web3 Exchange",
+        title: "Gym Fit",
+        category: "Fitness Platform",
         year: "2024",
-        // Blockchain/Abstract
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2600&auto=format&fit=crop"
+        image: gymFitImg,
+        link: "https://gymdemo.pskservice.org/"
     }
 ];
 
@@ -41,7 +46,7 @@ export const Work = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="label">Selected Work</span>
-                    <h2 className="display-lg">Projects that define industries.</h2>
+                    <h2 className="display-lg">Work that solves real problems..</h2>
                 </motion.div>
 
                 <div className="work-grid">
@@ -74,6 +79,7 @@ interface ProjectType {
     category: string;
     year: string;
     image: string;
+    link: string;
 }
 
 const ProjectCard = ({ project, index }: { project: ProjectType; index: number }) => {
@@ -94,10 +100,10 @@ const ProjectCard = ({ project, index }: { project: ProjectType; index: number }
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
         >
-            <a href="#" className="project-link">
+            <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
                 <div className="project-image-container">
                     <motion.div className="project-image-wrapper" style={{ y }}>
-                        <img src={project.image} alt={project.title} loading="lazy" />
+                        <img src={project?.image} alt={project.title} loading="lazy" />
                     </motion.div>
                     <div className="project-overlay">
                         <span className="project-view">View Project</span>

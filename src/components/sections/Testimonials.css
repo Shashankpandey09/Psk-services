@@ -4,6 +4,15 @@
     border-top: 1px solid var(--border);
 }
 
+.testimonials-header {
+    margin-bottom: 5rem;
+}
+
+.testimonials-header .label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
 .testimonials-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

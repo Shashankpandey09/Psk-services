@@ -1,5 +1,5 @@
 
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import './About.css';
 
 
@@ -17,7 +17,7 @@ export const About = () => {
                     >
                         <span className="label">The Agency</span>
                         <h2 className="display-lg">
-                            We operate at the intersection of <span className="about-highlight">art and engineering.</span>
+                            A digital agency  <span className="about-highlight">built for execution.</span>
                         </h2>
                     </motion.div>
 
@@ -29,9 +29,7 @@ export const About = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
                         >
-                            In a digital landscape cluttered with noise, we build clarity.
-                            PSK is a design and technology partner for ambitious brands
-                            looking to define the future.
+                          PSK is a design and technology partner helping businesses turn ideas into high-performing digital products.
                         </motion.p>
 
                         <motion.p
@@ -41,12 +39,11 @@ export const About = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
                         >
-                            Our methodology is rooted in subtraction. We remove the unnecessary
-                            to reveal the essential, creating products that are not just beautiful,
-                            but fundamentally sound and performant.
+                             We work with founders and teams who care about usability, performance, and long-term growth not surface-level design. We don't chase trends.
+                            We solve problems that matter to your business.
                         </motion.p>
 
-                     
+
                     </div>
                 </div>
             </div>

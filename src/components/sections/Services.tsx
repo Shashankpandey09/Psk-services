@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Layers, Rocket, Shield, Globe, Cpu, Smartphone } from 'lucide-react';
+import { Layers, Rocket, Search, Globe, Cpu, Smartphone } from 'lucide-react';
 import './Services.css';
 
 const services = [
@@ -15,24 +15,24 @@ const services = [
         description: "Robust, scalable architectures built with modern technologies for peak performance."
     },
     {
-        icon: <Rocket size={24} />,
-        title: "Brand Strategy",
-        description: "Defining your voice and positioning to cut through the noise in crowded markets."
+        icon: <Search size={24} />,
+        title: "SEO Optimisation",
+        description: "Strategic search engine optimization to boost your visibility and organic rankings."
     },
     {
         icon: <Globe size={24} />,
-        title: "Web3 Development",
-        description: "Smart contracts and decentralized applications for the new internet economy."
+        title: "Google Listing",
+        description: "Complete Google Business Profile setup and optimization for local search dominance."
     },
     {
         icon: <Smartphone size={24} />,
         title: "Mobile Experiences",
-        description: "Native and cross-platform applications that deliver seamless on-the-go interactions."
+        description: "Beautiful mobile apps for iOS and Android that your customers will love to use."
     },
     {
-        icon: <Shield size={24} />,
-        title: "Enterprise Security",
-        description: "Bank-grade protection woven into every layer of your application infrastructure."
+        icon: <Rocket size={24} />,
+        title: "Domain, Hosting & Email",
+        description: "End-to-end setup including domain registration, reliable hosting, professional email, and search indexing."
     }
 ];
 

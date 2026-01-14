@@ -4,13 +4,13 @@ import './Testimonials.css';
 const testimonials = [
     {
         quote: "PSK re-engineered our entire digital presence. The result is nothing short of world-class.",
-        author: "Alex V.",
-        role: "CEO, Nexus"
+        author: "Aniket Pandey.",
+        role: "Vikas Engineering"
     },
     {
         quote: "A rare combination of aesthetic restraint and technical dominance. They don't just build, they elevate.",
-        author: "Elena R.",
-        role: "CTO, Orbit"
+        author: "Mohit Sharma",
+        role: "Power Fitness"
     }
 ];
 
@@ -18,6 +18,15 @@ export const Testimonials = () => {
     return (
         <section className="testimonials-section">
             <div className="container">
+                <motion.div
+                    className="section-header testimonials-header"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <span className="label">Testimonials</span>
+                    <h2 className="display-lg">Trusted by teams who value <span className="text-secondary">clarity and execution.</span></h2>
+                </motion.div>
                 <div className="testimonials-wrapper">
                     {testimonials.map((t, i) => (
                         <TestimonialCard key={i} data={t} index={i} />

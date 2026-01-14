@@ -127,6 +127,7 @@ h6 {
 .display-lg {
     font-size: clamp(2.5rem, 6vw, 5rem);
     letter-spacing: -0.03em;
+    line-height: 1.2;
 }
 
 /* Cursor handling - Light mode needs dark cursor */

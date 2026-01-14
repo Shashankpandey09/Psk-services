@@ -44,8 +44,8 @@ function App() {
             borderTop: '1px solid var(--border-subtle)'
           }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600 }}>PSK.</span>
-              <p style={{ fontSize: '0.875rem', color: 'var(--text-tertiary)' }}>&copy; {new Date().getFullYear()} PSK Services.</p>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600 }}>PSK</span>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-tertiary)' }}>&copy; 2025 PSK Services.</p>
             </div>
           </footer>
         </>

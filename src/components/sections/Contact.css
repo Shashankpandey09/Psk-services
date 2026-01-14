@@ -139,6 +139,32 @@
     color: var(--text-primary);
 }
 
+/* Form States */
+.submit-btn.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-btn.success {
+    background: #22c55e;
+    color: white;
+}
+
+.submit-btn:disabled {
+    cursor: not-allowed;
+}
+
+.form-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: -1rem;
+}
+
 @media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -152,4 +178,40 @@
         gap: 1.5rem;
         align-items: flex-start;
     }
+
+    .submit-btn {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-link,
+    .detail-text {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        gap: 1.5rem;
+    }
+}
+
+/* WhatsApp Link Styling */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #25D366 !important;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E !important;
+}
+
+.whatsapp-link svg {
+    transition: transform 0.3s;
+}
+
+.whatsapp-link:hover svg {
+    transform: translate(3px, -3px);
 }

@@ -1,7 +1,39 @@
 
+import { useState, type FormEvent } from 'react';
 import './Contact.css';
 
 export const Contact = () => {
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setStatus('loading');
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch('https://formspree.io/f/xreebell', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                form.reset();
+                // Reset status after 5 seconds
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
+    };
+
     return (
         <section id="contact" className="contact-section">
             <div className="container">
@@ -13,32 +45,80 @@ export const Contact = () => {
                         <div className="contact-details">
                             <div className="detail-item">
                                 <span className="detail-label">Email</span>
-                                <a href="mailto:hello@psk.com" className="detail-link">hello@psk.com</a>
+                                <a href="mailto:hello@pskservice.org" className="detail-link">hello@pskservice.org</a>
+                            </div>
+                            <div className="detail-item">
+                                <span className="detail-label">WhatsApp</span>
+                                <a
+                                    href="https://wa.me/919026940191"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="detail-link whatsapp-link"
+                                >
+                                    <span>+91 9026940191</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" strokeWidth="1.5" />
+                                    </svg>
+                                </a>
                             </div>
                             <div className="detail-item">
                                 <span className="detail-label">Studio</span>
-                                <p className="detail-text">San Francisco, CA</p>
+                                <p className="detail-text">Delhi, India</p>
                             </div>
                         </div>
                     </div>
 
-                    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                    <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <input type="text" placeholder="Result" className="form-input" required />
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Result"
+                                className="form-input"
+                                required
+                                disabled={status === 'loading'}
+                            />
                             <label className="floating-label">Name</label>
                         </div>
                         <div className="form-group">
-                            <input type="email" placeholder="Result" className="form-input" required />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Result"
+                                className="form-input"
+                                required
+                                disabled={status === 'loading'}
+                            />
                             <label className="floating-label">Email</label>
                         </div>
                         <div className="form-group">
-                            <textarea placeholder="Result" className="form-input" rows={4} required />
+                            <textarea
+                                name="message"
+                                placeholder="Result"
+                                className="form-input"
+                                rows={4}
+                                required
+                                disabled={status === 'loading'}
+                            />
                             <label className="floating-label">Message</label>
                         </div>
 
-                        <button type="submit" className="submit-btn">
-                            <span>Send Message</span>
+                        <button
+                            type="submit"
+                            className={`submit-btn ${status === 'loading' ? 'loading' : ''} ${status === 'success' ? 'success' : ''}`}
+                            disabled={status === 'loading'}
+                        >
+                            <span>
+                                {status === 'loading' && 'Sending...'}
+                                {status === 'success' && '✓ Message Sent!'}
+                                {status === 'error' && 'Try Again'}
+                                {status === 'idle' && 'Send Message'}
+                            </span>
                         </button>
+
+                        {status === 'error' && (
+                            <p className="form-error">Something went wrong. Please try again or email us directly.</p>
+                        )}
                     </form>
                 </div>
 

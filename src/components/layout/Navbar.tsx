@@ -38,7 +38,6 @@ export const Navbar = () => {
             <div className="container navbar-inner">
                 <a href="/" className="nav-logo">
                     <span className="logo-text">PSK</span>
-                    <span className="logo-dot" />
                 </a>
 
                 <nav className="nav-links">

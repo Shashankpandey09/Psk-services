@@ -6,22 +6,22 @@ const steps = [
     {
         num: "01",
         title: "Discovery",
-        desc: "We dive deep into your ecosystem to identify the core opportunity."
+        desc: "We understand your product, users, and business constraints to identify the real problem worth solving."
     },
     {
         num: "02",
         title: "Strategy",
-        desc: "Architecting the blueprint that connects ambition to reality."
+        desc: "We define the product direction, experience architecture, and technical approach before writing a single line of code."
     },
     {
         num: "03",
-        title: "Creation",
-        desc: "Rigorous design and engineering with obsessive attention to detail."
+        title: "Design & Build",
+        desc: "Design and engineering move together to create usable, scalable, production-ready solutions."
     },
     {
         num: "04",
-        title: "Launch",
-        desc: "Deploying scalable systems that drive long-term dominance."
+        title: "Launch & Iterate",
+        desc: "We support launch, validate performance, and refine based on real usage — not assumptions."
     }
 ];
 
@@ -44,7 +44,7 @@ export const Process = () => {
                     viewport={{ once: true }}
                 >
                     <span className="label">Methodology</span>
-                    <h2 className="display-lg">The path to <span className="text-secondary">precision.</span></h2>
+                    <h2 className="display-lg">How we <span className="text-secondary">work.</span></h2>
                 </motion.div>
 
                 <div className="process-timeline">

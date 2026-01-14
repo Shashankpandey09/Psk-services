@@ -55,7 +55,9 @@ export const Hero = () => {
                             animate="visible"
                             variants={textVariants}
                         >
-                            <span className="display-xl">We craft digital</span>
+                        
+
+                            <span className="display-xl">We design and</span>
                         </motion.div>
                         <motion.div
                             className="headline-line"
@@ -64,7 +66,7 @@ export const Hero = () => {
                             animate="visible"
                             variants={textVariants}
                         >
-                            <span className="display-xl">experiences that</span>
+                            <span className="display-xl"> build digital</span>
                         </motion.div>
                         <motion.div
                             className="headline-line"
@@ -73,7 +75,7 @@ export const Hero = () => {
                             animate="visible"
                             variants={textVariants}
                         >
-                            <span className="display-xl accent">inspire.</span>
+                            <span className="display-xl accent"> products</span>
                         </motion.div>
                     </div>
 
@@ -92,9 +94,7 @@ export const Hero = () => {
                             animate="visible"
                             variants={textVariants}
                         >
-                            PSK is a premium digital agency specializing in
-                            brand strategy, web design, and development for
-                            forward-thinking companies.
+                           Strategy-led design and engineering for startups and growing companies that need clarity, speed, and scale.
                         </motion.p>
 
                         <motion.div
